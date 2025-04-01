@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>My portfolio</title>
+    <title>YairNoriega</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,7 +62,7 @@
             Soy un <span style="color: #E9A106;">diseñador profesional</span> orientado al <span style="color: #E9A106;">trabajo en equipo</span>,<br>
             y a la optimización de procesos de diseño,<br>
             con la capacidad de adaptarme rápidamente a distintos entornos laborales.<br>
-            Cuento con un <span style="color: #E9A106;">enfoque creativo</span>,<br>
+            Cuento con un <span style="color: #E9A106;">enfoque creativo</span>,
             habilidades de <span style="color: #E9A106;">comunicación</span> sólidas<br>
             y un alto nivel de <span style="color: #E9A106;">productividad</span>.
           </p>
@@ -80,10 +80,16 @@
       <!-- Contenedor flex para los títulos (Educación y Habilidades) -->
       <div style="display: flex; justify-content: space-between; align-items: center;">
           <!-- Título Educación alineado a la izquierda -->
-          <p style="font-size: 64px; color:#ffa500; text-align: left; flex: 1;">Educación</p>
+           <div style="display: flex; align-items: center;">
+        <p style="font-size: 64px; color:#ffa500; margin: 0;">Educación</p>
+        <div style="height: 5px; width: 650px; background-color: orange; margin-left: 10px;"></div>
+    </div>
           
           <!-- Título Habilidades alineado a la izquierda -->
-          <p style="font-size: 64px; color:#ffa500; text-align: left; flex: 1;">Habilidades</p>
+          <div style="display: flex; align-items: center;">
+            <p style="font-size: 64px; color:#ffa500; margin: 0;">Habilidades</p>
+            <div style="height: 5px; width: 550px; background-color: orange; margin-left: 10px;"></div>
+        </div>
       </div>
   
       <!-- Contenedor para la columna de Educación -->
@@ -97,7 +103,10 @@
               Licenciatura en Diseño<br>UAM Cuajimalpa [2021 - Actual]
             </p>
             <section>
-              <p style="font-size: 64px;color:#ffa500">Software</p>
+              <div style="display: flex; align-items: center;">
+                <p style="font-size: 64px; color:#ffa500; margin: 0;">Software</p>
+                <div style="height: 5px; width: 700px; background-color: orange; margin-left: 10px;"></div>
+            </div>
               <div style="font-size: 36px; display: flex; align-items: center; gap: 8px;">
                 <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/AutoCad_new_logo.svg.png"style="width: 200px; height: auto;"/>
                 <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
@@ -342,10 +351,12 @@
               </div>
           </div>
       </div>
-  </section>
-                 
-       <section style="display: flex; flex-direction: column; align-items: flex-end; padding: 16px;">
-        <p style="font-size: 64px; color:#ffa500">Idiomas</p>
+                  
+       <section style="display: flex; flex-direction: column; align-items: flex-start; padding: 16px;">
+        <div style="display: flex; align-items: center;">
+          <p style="font-size: 64px; color:#ffa500; margin: 0;">Idiomas</p>
+          <div style="height: 5px; width: 750px; background-color: orange; margin-left: 10px;"></div>
+      </div>
         <div style="font-size: 36px; display: flex; align-items: center; gap: 8px;">
             <p style="margin: 0;">Ingles</p>
             <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
@@ -383,54 +394,82 @@
             </svg>
         </div>          
     </section>
-    
-
-       <section>
-        <p style="font-size: 64px; color:#ffa500">Proyectos</p>
-        <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cursor" viewBox="0 0 16 16">
-          <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52z"/>
-        </svg>
-        <p style="font-size: 36px; background: orange; padding: 10px; display: inline-block; border-radius: 5px; color: white;">
-          Impreciones 3D y Render
-        </p>
-         <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cursor" viewBox="0 0 16 16">
-          <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52z"/>
-        </svg>
-        <p style="font-size: 36px; background: orange; padding: 10px; display: inline-block; border-radius: 5px; color: white;">
-         Animacion
-        </p>
-        <br>
-        <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cursor" viewBox="0 0 16 16">
-          <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52z"/>
-        </svg>
-        <p style="font-size: 36px; background: orange; padding: 10px; display: inline-block; border-radius: 5px; color: white;">
-          Señaletica
-        </p>
-        <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cursor" viewBox="0 0 16 16">
-          <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52z"/>
-        </svg>
-        <p style="font-size: 36px; background: orange; padding: 10px; display: inline-block; border-radius: 5px; color: white;">
-          Mockups
-        </p>
-       </section>
        
-       <section style="display: flex; flex-direction: column; align-items: flex-end; padding: 16px;">
-        <p style="font-size: 64px; color:#ffa500">Contactos</p>
-        
-        <p style="font-size: 36px; display: flex; align-items: center; gap: 8px;">
-            <i class="bi bi-envelope" style="color:orange;"></i>
-            Correo Electrónico: yair.noriega@cua.uam.mx
-        </p>
+  <div style="display: flex; justify-content: space-between; padding: 16px;">
     
-        <p style="font-size: 36px; display: flex; align-items: center; gap: 8px;">
-            <i class="bi bi-telephone-fill" style="color:orange;"></i>
-            Número móvil: (+52) 5511111639
-        </p>
-    
-        <p style="font-size: 36px; display: flex; align-items: center; gap: 8px;">
-            <i class="bi bi-file-earmark-person" style="color:orange;"></i>
-            Linkedin: <a href="https://www.linkedin.com/in/yair-ivan-noriega-perez-9a2b43338">Yair Noriega</a>
-        </p>
-    </section>   
+    <!-- Sección Proyectos (Izquierda) -->
+    <section style="display: flex; flex-direction: column; align-items: center; padding: 16px;">
+      <div style="display: flex; align-items: center;">
+        <p style="font-size: 64px; color:#ffa500; margin: 0;">Proyectos</p>
+        <div style="height: 5px; width: 700px; background-color: orange; margin-left: 10px;"></div>
+    </div>
+  
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%;">
+          <div style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
+              <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16">
+                  <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+              </svg>
+              <a href="pagina2.html">
+              <p style="font-size: 36px; background: #FF7F24; padding: 10px; display: inline-block; border-radius: 50px; color: white; width: 100%;">
+                  Impresiones 3D y Render
+              </p>
+              </a>
+          </div>
+  
+          <div style="display: flex; align-items: center; gap: 10px;">
+              <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16">
+                  <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+              </svg>
+              <p style="font-size: 36px; background: #FF7F24; padding: 10px; display: inline-block; border-radius: 50px; color: white;">
+                  Animación
+              </p>
+          </div>
+  
+          <div style="display: flex; align-items: center; gap: 10px;">
+              <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16">
+                  <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+              </svg>
+              <p style="font-size: 36px; background: #FF7F24; padding: 10px; display: inline-block; border-radius: 50px; color: white;">
+                  Señalética
+              </p>
+          </div>
+  
+          <div style="display: flex; align-items: center; gap: 10px;">
+              <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16">
+                  <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+              </svg>
+              <p style="font-size: 36px; background: #FF7F24; padding: 10px; display: inline-block; border-radius: 50px; color: white;">
+                  Mockups
+              </p>
+          </div>
+      </div>
+  </section>
+  
+
+    <!-- Sección Contactos (Derecha) -->
+    <section style="display: flex; flex-direction: column; align-items: flex-start; padding: 16px;">
+      <div style="display: flex; align-items: center;">
+        <p style="font-size: 64px; color:#ffa500; margin: 0;">Contactos</p>
+        <div style="height: 5px; width: 500px; background-color: orange; margin-left: 10px;"></div>
+    </div>
+  
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 36px; color: black;">
+          <li style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+              <i class="bi bi-envelope" style="color:orange;"></i>
+              Correo Electrónico: yair.noriega@cua.uam.mx
+          </li>
+          <li style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+              <i class="bi bi-telephone-fill" style="color:orange;"></i>
+              Número móvil: (+52) 5511111639
+          </li>
+          <li style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+              <i class="bi bi-file-earmark-person" style="color:orange;"></i>
+              Linkedin: <a href="https://www.linkedin.com/in/yair-ivan-noriega-perez-9a2b43338" style="color: black;">Yair Noriega</a>
+          </li>
+      </ul>
+  </section>
+  
+</div>
+
   </body>
 </html>
