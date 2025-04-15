@@ -1,445 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <title>YairNoriega</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargando...</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid orange;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 15px;
+    }
 
-    <!-- meta name="author" content="Yair Noriega" />
-    <meta name="description" content="Brief description" />
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
-    <meta property="og:title" content="Your Page Title" />
-    <meta property="og:description" content="Brief description" />
-    <meta property="og:image" content="/some-image.png" />
-    <meta property="og:url" content="/this-page.html" />
-    <meta property="og:site_name" content="Your Site Name" />
+    .mensaje {
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
 
-    <link href="styles.css" rel="stylesheet" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" / -->
+  <div class="loader"></div>
+  <div class="mensaje">Cargando versión adecuada...</div>
 
-    <!-- importar bootstrap  -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-        <!-- fin importacion bootstrap  -->
+  <script>
+    // Esperar un momento para mostrar la animación
+    setTimeout(() => {
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        window.location.href = "movil.html"; // versión móvil
+      } else {
+        window.location.href = "web.html"; // versión para computadora
+      }
+    }, 1500); // 1.5 segundos de pantalla de carga
+  </script>
 
-    <!--Tipografia -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Emblema+One&family=Russo+One&display=swap" rel="stylesheet">
-  </head>
-    <!-- color de fondo-->
-  <body style="background-color: #F4F4F4;"section>
-    <!--Titulo-->
-    <div style="display: flex; align-items: start; gap: 20px;">
-      <!-- Imagen a la izquierda -->
-      <img class="foto" alt="foto de perfil" src="./src/img/Captura de pantalla 2025-02-25 092008.png" style="width: 599px; height: auto; border-radius: 8px;"/>
-    
-      <!-- Contenido a la derecha -->
-      <div style="display: flex; flex-direction: column; gap: 16px;">
-        <h1 style="font-size: 96px; color:#ffa500; margin: 0;">Yair Ivan Noriega Perez</h1>
-        <p style="font-size: 36px" margin: 0;"><strong>Diseñador</strong> | 27 Años | San Miguel Chapultepec, Miguel Hidalgo, CDMX</p>
-        
-        <div style="background-color: #F6EFE7; border: 2px solid #A7763F; padding: 16px; border-radius: 8px; max-width: 100%; display: flex; align-items: center; gap: 16px;">
-          <!-- Icono -->
-          <svg style="fill:rgb(255, 165, 0);" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-          </svg>
-        
-          <!-- Texto -->
-          <p style="margin: 0; font-size: 36px; text-align: left;">
-            Soy un <span style="color: #E9A106;">diseñador profesional</span> orientado al <span style="color: #E9A106;">trabajo en equipo</span>,<br>
-            y a la optimización de procesos de diseño,<br>
-            con la capacidad de adaptarme rápidamente a distintos entornos laborales.<br>
-            Cuento con un <span style="color: #E9A106;">enfoque creativo</span>,
-            habilidades de <span style="color: #E9A106;">comunicación</span> sólidas<br>
-            y un alto nivel de <span style="color: #E9A106;">productividad</span>.
-          </p>
-        </div>
-        
-        
-        
-        </div>        
-      </div>
-    </div>
-    
-      
-      
-    <section style="padding: 16px;">
-      <!-- Contenedor flex para los títulos (Educación y Habilidades) -->
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-          <!-- Título Educación alineado a la izquierda -->
-           <div style="display: flex; align-items: center;">
-        <p style="font-size: 64px; color:#ffa500; margin: 0;">Educación</p>
-        <div style="height: 5px; width: 650px; background-color: orange; margin-left: 10px;"></div>
-    </div>
-          
-          <!-- Título Habilidades alineado a la izquierda -->
-          <div style="display: flex; align-items: center;">
-            <p style="font-size: 64px; color:#ffa500; margin: 0;">Habilidades</p>
-            <div style="height: 5px; width: 550px; background-color: orange; margin-left: 10px;"></div>
-        </div>
-      </div>
-  
-      <!-- Contenedor para la columna de Educación -->
-      <div style="display: flex; justify-content: flex-start; gap: 40px; margin-top: 20px;">
-          <!-- Columna de Educación con Licenciatura en Diseño -->
-          <div style="flex: 1; text-align: left; font-size: 36px;">
-            <p style="font-size: 36px; display: flex; align-items: center; gap: 8px; margin: 0;">
-              <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
-                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
-              </svg>
-              Licenciatura en Diseño<br>UAM Cuajimalpa [2021 - Actual]
-            </p>
-            <section>
-              <div style="display: flex; align-items: center;">
-                <p style="font-size: 64px; color:#ffa500; margin: 0;">Software</p>
-                <div style="height: 5px; width: 700px; background-color: orange; margin-left: 10px;"></div>
-            </div>
-            <div style="font-size: 36px; display: flex; align-items: center; gap: 8px;margin-bottom: 16px;">
-              <img class="foto" alt="AutoCad_new_logosrc" src="./src/img/Autodesk-AutoCAD-logo.png" style="width: 55px; height: auto;" />
-              <p style="margin: 0;">Autocad</p>
-              
-              <div style="display: flex; gap: 4px; margin-left: 155px;color: #E9A106;">
-                <i class="bi bi-circle-fill"></i>
-                <i class="bi bi-circle-fill"></i>
-                <i class="bi bi-circle-fill"></i>
-                <i class="bi bi-circle-fill"></i>
-                <i class="bi bi-circle"></i>
-              </div>
-            </div>
-            
-              
-              <div style="font-size: 36px;  display: flex; align-items: center; gap: 8px;margin-bottom: 16px;">
-                <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/Adobe_Photoshop_CC_icon.svg.png"style="width: 55px; height: auto;"/>
-                <p style="margin: 0;">Photoshop</p>
-                <div style="display: flex; gap: 4px; margin-left: 115px;color: #E9A106;">
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle"></i>
-                </div>         
-              </div>
-              
-              <div style="font-size: 36px; display: flex; align-items: center; gap: 8px;margin-bottom: 16px;">
-                <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/Adobe_Illustrator_CC_icon.svg.png"style="width: 55px; height: auto;"/>
-                <p style="margin: 0;">Illustrator</p>
-                <div style="display: flex; gap: 4px; margin-left: 135px;color: #E9A106;">
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle"></i>
-                </div>
-              </div>
-              
-              <div style="font-size: 36px; display: flex; align-items: center; gap: 8px;margin-bottom: 16px;">
-                <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/sketchup logo.png"style="width: 55px; height: auto;"/>
-                <p style="margin: 0;">Sketchup</p> 
-                <div style="display: flex; gap: 4px; margin-left: 140px;color: #E9A106;">
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle"></i>
-                </div>
-              </div>
-              <div style="font-size: 36px; display: flex; align-items: center; gap: 8px;margin-bottom: 16px;">
-                <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/Blender_logo_no_text.svg.png"style="width: 55px; height: auto;"/>
-
-                <p style="margin: 0;">Blender</p>
-                <div style="display: flex; gap: 4px; margin-left: 165px;color: #E9A106;">
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle"></i>
-                  <i class="bi bi-circle"></i>
-                  <i class="bi bi-circle"></i>
-                </div>
-              </div>
-              
-              <div style="font-size: 36px; display: flex; align-items: center; gap: 8px;margin-bottom: 16px;">
-                <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/Microsoft_Office_logo_(2013–2019).svg.png"style="width: 55px; height: auto;"/>
-                <p style="margin: 0;">Paqueteria Office</p>
-                <div style="display: flex; gap: 4px; margin-left: 13px;color: #E9A106;">
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle"></i>
-                </div>
-              </div>
-              <div style="font-size: 36px; display: flex; align-items: center; gap: 8px;">
-                <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/Ultimaker_cura.png"style="width: 55px; height: auto;"/>
-                <p style="margin: 0;">Ultimaker Cura</p>
-                <div style="display: flex; gap: 4px; margin-left: 47px;color: #E9A106;">
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle-fill"></i>
-                  <i class="bi bi-circle"></i>
-                </div>
-              </div>
-      
-             </section>
-          </div>
-  
-          <!-- Contenedor para las dos columnas de habilidades -->
-          <div style="flex: 1; display: flex; justify-content: flex-end; gap: 40px;">
-              <!-- Columna 1 con 6 habilidades -->
-              <div style="flex: 1; text-align: left; font-size: 36px;">
-                <p style="display: flex: 1;; justify-content: space-between; gap: 40px;font-size: 36px">
-                  <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                  </svg>
-                  Diseño Grafico
-                </p>
-                <p style="display: flex: 1;; justify-content: space-between; gap: 40px;font-size: 36px">
-                  <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                  </svg>
-                  Creatividad
-                </p>
-                <p style="display: flex: 1;; justify-content: space-between; gap: 40px;font-size: 36px">
-                  <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                  </svg>
-                  Gestion de tiempo
-                </p>
-                <p style="display: flex: 1;; justify-content: space-between; gap: 40px;font-size: 36px">
-                  <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                  </svg>
-                  Comunicacion Efectiva
-                </p>
-                <p style="display: flex: 1;; justify-content: space-between; gap: 40px;font-size: 36px">
-                  <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                  </svg>
-                  Visualizacion de Datos
-                </p>
-                <p style="display: flex: 1;; justify-content: space-between; gap: 40px;font-size: 36px">
-                  <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                  </svg>
-                  Capacidad de Trabajar en Equipo
-                </p>
-              </div>
-  
-              <!-- Columna 2 con 7 habilidades -->
-              <div style="flex: 1; text-align: left; font-size: 36px;">
-                <p style="display: flex: 1; justify-content: space-between; gap: 40px;font-size: 36px">
-                  <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                  </svg>
-                  Logo y Branding
-                </p>
-                <p style="display: flex: 1;; justify-content: space-between; gap: 40px;font-size: 36px">
-                  <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                  </svg>
-                  Interfaces
-                </p>
-                <p style="display: flex: 1;; justify-content: space-between; gap: 40px;font-size: 36px">
-                  <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                  </svg>
-                  Editorial Layout
-                </p>
-                <p style="display: flex: 1;; justify-content: space-between; gap: 40px;font-size: 36px">
-                  <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                  </svg>
-                  Infografias
-                </p>
-                <p style="display: flex: 1;; justify-content: space-between; gap: 40px;font-size: 36px">
-                  <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                  </svg>
-                  Diseño de Personajes
-                </p>
-                <p style="display: flex: 1;; justify-content: space-between; gap: 40px;font-size: 36px">
-                  <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                  </svg>
-                  Ilustracion
-                </p>
-                <p style="display: flex: 1;; justify-content: space-between; gap: 40px;font-size: 36px">
-                  <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                  </svg>
-                  Animacion
-                </p>
-              </div>
-          </div>
-      </div>
-                  
-       <section style="display: flex; flex-direction: column; align-items: flex-start; padding: 16px;">
-        <div style="display: flex; align-items: center;">
-          <p style="font-size: 64px; color:#ffa500; margin: 0;">Idiomas</p>
-          <div style="height: 5px; width: 750px; background-color: orange; margin-left: 10px;"></div>
-      </div>
-        <div style="font-size: 36px; display: flex; align-items: center; gap: 8px;">
-            <p style="margin: 0;">Ingles</p>
-            <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
-                <circle cx="8" cy="8" r="8"/>
-            </svg>
-            <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
-                <circle cx="8" cy="8" r="8"/>
-            </svg>
-            <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
-                <circle cx="8" cy="8" r="8"/>
-            </svg>
-            <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-            </svg>
-            <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-            </svg>
-        </div>
-        <div style="font-size: 36px; display: flex; align-items: center; gap: 8px;">
-            <p style="margin: 0;">Español</p>
-            <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
-                <circle cx="8" cy="8" r="8"/>
-            </svg>
-            <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
-                <circle cx="8" cy="8" r="8"/>
-            </svg>
-            <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
-                <circle cx="8" cy="8" r="8"/>
-            </svg>
-            <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
-                <circle cx="8" cy="8" r="8"/>
-            </svg>
-            <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
-                <circle cx="8" cy="8" r="8"/>
-            </svg>
-        </div>          
-    </section>
-       
-  <div style="display: flex; justify-content: space-between; padding: 16px;">
-    
-    <!-- Sección Proyectos (Izquierda) -->
-    <section style="display: flex; flex-direction: column; align-items: center; padding: 16px;">
-      <div style="display: flex; align-items: center;">
-        <p style="font-size: 64px; color:#ffa500; margin: 0;">Proyectos</p>
-        <div style="height: 5px; width: 700px; background-color: orange; margin-left: 10px;"></div>
-    </div>
-  
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%;">
-          <div style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
-              <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16">
-                  <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
-              </svg>
-              <a href="pagina2.html">
-              <p style="font-size: 36px; background: #FF7F24; padding: 10px; display: inline-block; border-radius: 50px; color: white; width: 100%;">
-                  Impresiones 3D y Render
-              </p>
-              </a>
-          </div>
-  
-          <div style="display: flex; align-items: center; gap: 10px;">
-              <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16">
-                  <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
-              </svg>
-              <a href="pagina 4.html">
-              <p style="font-size: 36px; background: #FF7F24; padding: 10px; display: inline-block; border-radius: 50px; color: white;">
-                  Animación
-              </p>
-            </a>
-          </div>
-  
-          <div style="display: flex; align-items: center; gap: 10px;">
-              <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16">
-                  <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
-              </svg>
-              <a href="pagina 3.html">
-              <p style="font-size: 36px; background: #FF7F24; padding: 10px; display: inline-block; border-radius: 50px; color: white;">
-                  Señalética
-              </p>
-            </a>
-          </div>
-  
-          <div style="display: flex; align-items: center; gap: 10px;">
-              <svg style="fill:orange;" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16">
-                  <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
-              </svg>
-              <a href="pagina 5.html">
-              <p style="font-size: 36px; background: #FF7F24; padding: 10px; display: inline-block; border-radius: 50px; color: white;">
-                  Mockups
-              </p>
-            </a>
-          </div>
-      </div>
-  </section>
-  
-
-    <!-- Sección Contactos (Derecha) -->
-    <section style="display: flex; flex-direction: column; align-items: flex-start; padding: 16px;">
-      <div style="display: flex; align-items: center;">
-        <p style="font-size: 64px; color:#ffa500; margin: 0;">Contactos</p>
-        <div style="height: 5px; width: 500px; background-color: orange; margin-left: 10px;"></div>
-    </div>
-  
-      <ul style="list-style: none; padding: 0; margin: 0; font-size: 36px; color: black;">
-          <li style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-              <i class="bi bi-envelope" style="color:orange;"></i>
-              Correo Electrónico: yair.noriega@cua.uam.mx
-          </li>
-          <li style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-              <i class="bi bi-telephone-fill" style="color:orange;"></i>
-              Número móvil: (+52) 5511111639
-          </li>
-          <li style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-              <i class="bi bi-file-earmark-person" style="color:orange;"></i>
-              Linkedin: <a href="https://www.linkedin.com/in/yair-ivan-noriega-perez-9a2b43338" style="color: black;">Yair Noriega</a>
-          </li>
-      </ul>
-  </section>
-  
-</div>
-<a href="movil.html" class="boton-web">Versión movil <a>
-
-<style>
-  .boton-web {
-    display: inline-block;
-    background-color: orange;
-    color: white;
-    padding: 10px 20px;
-    margin: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-  }
-
-  .boton-web:hover {
-    background-color: darkorange;
-  }
-</style>
-  </body>
+</body>
 </html>

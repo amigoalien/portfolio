@@ -53,10 +53,11 @@
     }
 
     h1 {
-      font-size: 24px;
-      text-align: center;
+      font-size: 55px;
+      text-align: left;
       margin-top: 10px;
       font-weight: bold;
+      color:orange
     }
 
     h1 span {
@@ -66,14 +67,13 @@
 
     .foto {
       text-align: center;
-      margin: 20px 0;
+      margin: 5px 0;
     }
+    
 
     .foto img {
-      border-radius: 50%;
-      border: 5px solid orange;
-      width: 180px;
-      height: 180px;
+      width: 300px;
+      height: 300px;
       object-fit: cover;
     }
 
@@ -84,19 +84,20 @@
     }
 
     .descripcion {
-      border: 1px solid #ccc;
-      border-left: 5px solid orange;
-      margin: 15px;
-      padding: 10px;
+      border: 2px solid orange;
+      border-left: 2px solid orange;
+      padding: 5px;
       font-size: 13px;
+      border-radius: 12px;
     }
 
     .descripcion strong {
       color: orange;
+      text-align: left;
     }
 
     .seccion {
-      margin: 20px 15px;
+      margin: 20px 0px;
     }
 
     .seccion h2 {
@@ -114,8 +115,12 @@
     .software, .habilidades, .idiomas, .proyectos {
       font-size: 14px;
       line-height: 1.6;
+      
     }
-
+    .habilidades {
+  display: flex;
+  gap: 2rem; /* espacio entre columnas, opcional */
+}
     .dot-bar {
       display: inline-block;
       margin-left: 10px;
@@ -153,6 +158,31 @@
       font-size: 12px;
       margin: 5px 5px 0 0;
     }
+    .bi-gear-fill {
+      color: orange;
+    }
+    .bi-book{
+      color:orange;
+    }
+    .bi-envelope{
+      color:orange;
+    } 
+    .bi-telephone{
+      color:orange;
+    }
+    .bi-person-lines-fill{
+      color:orange;
+    }
+    .bi-cursor {
+      color:orange
+    }
+    .title{
+      color: black;
+    }
+    .columna {
+  flex: 1;
+    }
+    
 
     footer {
       text-align: center;
@@ -163,7 +193,7 @@
 </head>
 <body>
 
-  <h1>Yair Ivan Noriega <span>Perez</span></h1>
+  <h1 style=>Yair Ivan Noriega Perez</h1>
 
   <div class="foto">
     <img src="src/img/Captura de pantalla 2025-02-25 092008.png" alt="Foto de Yair">
@@ -177,7 +207,7 @@
 
   <div class="seccion">
     <h2>Educación</h2>
-    <div class="subtexto">🎓 Licenciatura en Diseño<br>UAM Cuajimalpa (2021 - Actual)</div>
+    <div class="subtexto"><i class="bi bi-book"></i> Licenciatura en Diseño<br>UAM Cuajimalpa (2021 - Actual)</div>
   </div>
 
   <div class="seccion">
@@ -185,72 +215,72 @@
     <div class="software">
         <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/Autodesk-AutoCAD-logo.png" style="width: 25px; height: auto;"/>
         AutoCAD <div class="dot-bar">
-        <div style="display: flex; gap: 4px; margin-left: 13px;color: #E9A106;">
+        <div style="display: flex; gap: 4px; margin-left: 49px;color: #E9A106;">
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
-            <i class="bi bi-circle-fill"></i>
+            <i class="bi bi-circle"></i>
         </div>
       </div><br>
       <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/Adobe_Photoshop_CC_icon.svg.png" style="width: 25px; height: auto;"/>
       Photoshop <div class="dot-bar">
-        <div style="display: flex; gap: 4px; margin-left: 13px;color: #E9A106;">
+        <div style="display: flex; gap: 4px; margin-left: 39px;color: #E9A106;">
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
-            <i class="bi bi-circle-fill"></i>
+            <i class="bi bi-circle"></i>
         </div>
       </div><br>
       <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/Adobe_Illustrator_CC_icon.svg.png" style="width: 25px; height: auto;"/>
       Illustrator <div class="dot-bar">
-        <div style="display: flex; gap: 4px; margin-left: 13px;color: #E9A106;">
+        <div style="display: flex; gap: 4px; margin-left: 48px;color: #E9A106;">
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
-            <i class="bi bi-circle-fill"></i>
+            <i class="bi bi-circle"></i>
         </div>
       </div><br>
       <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/sketchup logo.png" style="width: 25px; height: auto;"/>
       Sketchup <div class="dot-bar">
-        <div style="display: flex; gap: 4px; margin-left: 13px;color: #E9A106;">
+        <div style="display: flex; gap: 4px; margin-left: 47px;color: #E9A106;">
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
-            <i class="bi bi-circle-fill"></i>
+            <i class="bi bi-circle"></i>
         </div>
       </div><br>
       <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/Blender_logo_no_text.svg.png" style="width: 25px; height: auto;"/>
       Blender <div class="dot-bar">
-        <div style="display: flex; gap: 4px; margin-left: 13px;color: #E9A106;">
+        <div style="display: flex; gap: 4px; margin-left: 57px;color: #E9A106;">
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
-            <i class="bi bi-circle-fill"></i>
-            <i class="bi bi-circle-fill"></i>
+            <i class="bi bi-circle"></i>
+            <i class="bi bi-circle"></i>
         </div>
       </div><br>
       <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/Microsoft_Office_logo_(2013–2019).svg.png" style="width: 25px; height: auto;"/>
       Paquetería Office <div class="dot-bar">
-        <div style="display: flex; gap: 4px; margin-left: 13px;color: #E9A106;">
+        <div style="display: flex; gap: 4px; margin-left: -3px;color: #E9A106;">
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
-            <i class="bi bi-circle-fill"></i>
+            <i class="bi bi-circle"></i>
         </div>
       </div><br>
       <img class="foto" alt = "AutoCad_new_logosrc" src="./src/img/Ultimaker_cura.png" style="width: 25px; height: auto;"/>
       Ultimaker Cura <div class="dot-bar">
-        <div style="display: flex; gap: 4px; margin-left: 13px;color: #E9A106;">
+        <div style="display: flex; gap: 4px; margin-left: 11px;color: #E9A106;">
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
             <i class="bi bi-circle-fill"></i>
-            <i class="bi bi-circle-fill"></i>
+            <i class="bi bi-circle"></i>
         </div>
       </div>
     </div>
@@ -259,20 +289,25 @@
   <div class="seccion">
     <h2>Habilidades</h2>
     <div class="habilidades">
-      • Diseño Gráfico<br>
-      • Creatividad<br>
-      • Gestión de tiempo<br>
-      • Comunicación efectiva<br>
-      • Visualización de datos<br>
-      • Capacidad de trabajar en equipo<br>
-      • Logo y Branding<br>
-      • Interfaces<br>
-      • Editorial/Layout<br>
-      • Infografías<br>
-      • Diseño de Personajes<br>
-      • Animación
+      <div class="columna">
+        <i class="bi bi-gear-fill"></i> Diseño Gráfico<br>
+        <i class="bi bi-gear-fill"></i> Creatividad<br>
+        <i class="bi bi-gear-fill"></i> Gestión de tiempo<br>
+        <i class="bi bi-gear-fill"></i> Comunicación efectiva<br>
+        <i class="bi bi-gear-fill"></i> Visualización de datos<br>
+        <i class="bi bi-gear-fill"></i> Capacidad de trabajar en equipo
+      </div>
+      <div class="columna">
+        <i class="bi bi-gear-fill"></i> Logo y Branding<br>
+        <i class="bi bi-gear-fill"></i> Interfaces<br>
+        <i class="bi bi-gear-fill"></i> Editorial/Layout<br>
+        <i class="bi bi-gear-fill"></i> Infografías<br>
+        <i class="bi bi-gear-fill"></i> Diseño de Personajes<br>
+        <i class="bi bi-gear-fill"></i> Animación
+      </div>
     </div>
   </div>
+  
 
   <div class="seccion">
     <h2>Idiomas</h2>
@@ -302,9 +337,13 @@
   <div class="seccion">
     <h2>Proyectos</h2>
     <div class="proyectos">
+      <i class="bi bi-cursor"></i>
       <span class="tag">Señalética</span>
+      <i class="bi bi-cursor"></i>
       <span class="tag">Mockups</span>
+      <i class="bi bi-cursor"></i>
       <span class="tag">Animación</span>
+      <br> <i class="bi bi-cursor"></i>
       <span class="tag">Impresiones 3D y Render</span>
     </div>
   </div>
@@ -312,9 +351,9 @@
   <div class="seccion">
     <h2>Contactos</h2>
     <div class="contacto">
-      📧 yair.noriega@cua.uam.mx<br>
-      📱 (+52) 5511111639<br>
-      🔗 Linkedin: Yair Noriega
+      <i class="bi bi-envelope"></i> yair.noriega@cua.uam.mx<br>
+      <i class="bi bi-telephone"></i> (+52) 5511111639<br>
+      <i class="bi bi-person-lines-fill"></i> Linkedin: Yair Noriega
     </div>
   </div>
 
