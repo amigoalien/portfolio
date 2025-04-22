@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto - Impresiones 3D y Señaletica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+      text-align: center;
+    }
+
+    .titulo {
+      font-size: 6vw;
+      font-weight: bold;
+      color: #f6a313;
+      margin: 6vw 0 3vw 0;
+    }
+
+    .img-placeholder, .img-circular-placeholder {
+      width: 90vw;
+      height: 50vw;
+      margin: 2vw auto;
+      border: 2px solid #00a2ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 4vw;
+    }
+
+    .img-circular-placeholder {
+      border-radius: 50%;
+      width: 50vw;
+      height: 50vw;
+      border: 2px solid #00a2ff;
+    }
+
+    .subtitulo {
+      font-size: 6vw;
+      font-weight: bold;
+      color: #f6a313;
+      margin-top: 8vw;
+    }
+
+    .navegacion {
+      margin: 8vw 0;
+      display: flex;
+      justify-content: center;
+      gap: 4vw;
+    }
+
+    .navegacion button {
+      font-size: 4vw;
+      padding: 2vw 5vw;
+      border: none;
+      background-color: #f6a313;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .navegacion button:hover {
+      background-color: #e08900;
+    }
+  </style>
+</head>
+<body id="top">
+
+  <div class="titulo">Impresiones 3D<br>y Render</div>
+
+  <img src="src/img/isometrico museo.png" alt="Render técnico" class="img-placeholder">
+  <img src="src/img/Render museo.png" alt="Render técnico" class="img-placeholder">
+
+  <div id="senaletica" class="subtitulo">Señalética</div>
+
+  <img src="src/img/señaletica 1.jpg" alt="Señalética 1" class="img-circular-placeholder">
+  <img src="src/img/señaletica 2.png" alt="Señalética 1" class="img-circular-placeholder">
+
+  <div class="navegacion">
+    <a href="#top">
+        <button>⬆</button>
+      </a>
+    <a href="movil.html"><button>Inicio</button></a>
+    <a href="movil pagina 2.html"><button>➡</button></a>
+  </div>
+
+</body>
+</html>
